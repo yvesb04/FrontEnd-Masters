@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+.header-name {
+  font-family: "Snell Roundhand";
+  font-weight: normal;
+  font-size: 60px;
+  text-align: center;
+}
+
+.section-link {
+  font-weight: bold;
+  font-family: "Futura";
+  display: flex;
+  font-size: 30px;
+  text-decoration: none;
+  color: #666;
+  justify-content: center;
+}
+
+.section-link:hover {
+  text-decoration: underline;
+}
+
+.listt {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-around;
+  border: 3px solid black;
+  padding: 30px;
+  margin: 0;
+}
+
+body {
+  padding: 30px;
+}
+
+.page {
+  display: grid;
+  grid-template-areas: 
+    "title title title"
+    "navList navList navList"
+    "story1 story2 story3"
+    "story4 story5 story5";
+}
+
+.article-title {
+  font-weight: normal;
+  font-size: 30px;
+  font-style: italic;
+  text-align: center;
+}
+
+.story {
+  border-bottom: 3px solid black;
+  border-left: 3px solid black;
+  padding: 10px;
+}
+
+.dog {
+  display: block;
+  margin: 0 auto;
+  max-height: 250px;
+}
+
+.story-1 {
+  grid-area: story1;
+}
+
+.story-2 {
+  grid-area: story2;
+}
+
+.story-3 {
+  grid-area: story3;
+  border-right: 3px solid black;
+}
+
+.story-4 {
+  grid-area: story4;
+}
+
+.story-5 {
+  grid-area: story5;
+  border-right: 3px solid black;
+}
+
+.nav-list {
+  grid-area: navList;
+}
+
+.titles {
+  grid-area: title;
+}
