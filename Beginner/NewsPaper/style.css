@@ -39,7 +39,7 @@ body {
 
 .page {
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     "title title title"
     "navList navList navList"
     "story1 story2 story3"
