@@ -39,11 +39,13 @@ body {
 
 .page {
   display: grid;
+  gap: 30px;
   grid-template-areas:
     "title title title"
     "navList navList navList"
     "story1 story2 story3"
     "story4 story5 story5";
+    grid-template-columns: repeat(3, 1fr);
 }
 
 .article-title {
@@ -54,15 +56,16 @@ body {
 }
 
 .story {
-  border-bottom: 3px solid black;
-  border-left: 3px solid black;
+border: 3px solid black;
   padding: 10px;
 }
 
 .dog {
   display: block;
   margin: 0 auto;
-  max-height: 250px;
+  object-fit: cover;
+  max-width: 100%;
+  max-height: 100;
 }
 
 .story-1 {
@@ -75,7 +78,6 @@ body {
 
 .story-3 {
   grid-area: story3;
-  border-right: 3px solid black;
 }
 
 .story-4 {
@@ -84,7 +86,6 @@ body {
 
 .story-5 {
   grid-area: story5;
-  border-right: 3px solid black;
 }
 
 .nav-list {

@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+.coffee-logo {
+  display: inline-block;
+}
+
+.header1-coffee {
+  font-family: 'Open Sans', sans-serif;
+}
