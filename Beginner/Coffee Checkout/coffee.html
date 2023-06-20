@@ -5,28 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coffee Checkout</title>
     <link
-      rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header-coffee">
-      <img
-        src="https://btholt.github.io/complete-intro-to-web-dev-v3/images/coffee_masters_logo.png"
-        alt="coffee_masters_logo"
-        class="logo"
-      />
-      <h1 class="header1-coffee">Coffee Masters</h1>
+    <header class="header-coffee-bar">
+      <h1 class="header-coffee">
+        <img
+          src="https://btholt.github.io/complete-intro-to-web-dev-v3/images/coffee_masters_logo.png"
+          alt="coffee_masters_logo"
+          class="coffee-logo"
+        />Coffee Masters
+      </h1>
     </header>
-    <div class="example-group">
-      <label for="Local"></label>
-      <input
-        type="text"
-        placeholder="hello type here"
-        class="example-input"
-        id="example"
-      />
+    <div class="page">
+      <section class="order box">
+        <h2 class="box-name">ITEMS</h2>
+        <ul class="items">
+          <li class="item">
+            <div class="item-quantity">1x</div>
+            <div class="item-name">Cappucino</div>
+            <div class="item-price">$6.00</div>
+            <ul class="item-options-list">
+              <li class="item-option">Light Foam</li>
+            </ul>
+          </li>
+          <li class="item">
+            <div class="item-quantity">1x</div>
+            <div class="item-name">Cappucino</div>
+            <div class="item-price">$7.90</div>
+            <ul class="item-options-list">
+              <li class="item-option">Almond Milk</li>
+              <li class="item-option">Double Espresso Shot</li>
+            </ul>
+          </li>
+          <li class="item">
+            <div class="item-quantity">1x</div>
+            <div class="item-name">Croissant</div>
+            <div class="item-price">$5.37</div>
+            <ul class="item-options-list">
+              <li class="item-option">Butter</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      <section class="name box">
+        <h2 class="box-name">NAME</h2>
+        <div class="input-group">
+          <label for="name-id" class="input-label">Name for order</label>
+          <input type="text" id="name-id" class="input-input" />
+        </div>
+      </section>
+      <section class="payment box">
+          <h2 class="box-name">PAYMENT</h2>
+          <div class="input-group">
+            <label for="card-id" class="input-label">Card number</label>
+            <input type="text" id="card-id" class="input-input" />
+          </div>
+          <div class="input-group">
+            <label for="ccv-id" class="input-label">CCV number</label>
+            <input type="text" id="ccv-id" class="input-input" />
+          </div>
+        
+      </section>
     </div>
   </body>
 </html>

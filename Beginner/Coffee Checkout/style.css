@@ -2,10 +2,97 @@
   box-sizing: border-box;
 }
 
-.coffee-logo {
-  display: inline-block;
-}
-
-.header1-coffee {
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #efefef;
   font-family: 'Open Sans', sans-serif;
 }
+
+.coffee-logo {
+  height: 25px;
+  top: 3px;
+  position: relative;
+  right: 3px;
+  
+}
+
+.header-coffee {
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  
+}
+
+.header-coffee-bar {
+  color: #fbf2c0;
+  font-weight: normal;
+  background-color: #43281c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page {
+  display: grid;
+  gap: 20px;
+  grid-template-areas: 
+  "order name"
+  "order payment";
+  margin: 30px;
+}
+
+.box {
+  background-color: #eee1d5;
+  padding: 10px;
+
+}
+
+.order {
+  grid-area: order;
+}
+
+.name {
+  grid-area: name;
+}
+
+.payment {
+  grid-area: payment;
+}
+
+.box-name {
+  color: #88653c;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.item-name {
+  font-weight: bold;
+}
+
+.item-price {
+  font-weight: bold;
+}
+
+.input-group {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.input-label {
+  color: #88653c;
+  font-size: 11px;
+  position:absolute;
+  left: 25px;
+  top: -7px;
+  padding: 0px 2px;
+  background-color: #eee1d5;
+}
+
+.input-input {
+  padding: 8px;
+  border-radius: 20px;
+  background-color: #eee1d5;
+  border: 2px solid #88653c;
+}
+
