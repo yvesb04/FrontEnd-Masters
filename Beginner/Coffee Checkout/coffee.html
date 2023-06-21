@@ -51,14 +51,16 @@
           </li>
         </ul>
       </section>
-      <section class="name box">
-        <h2 class="box-name">NAME</h2>
-        <div class="input-group">
-          <label for="name-id" class="input-label">Name for order</label>
-          <input type="text" id="name-id" class="input-input" />
+
+      <section class="payment-column">
+        <div class="name box">
+          <h2 class="box-name">NAME</h2>
+          <div class="input-group">
+            <label for="name-id" class="input-label">Name for order</label>
+            <input type="text" id="name-id" class="input-input" />
+          </div>
         </div>
-      </section>
-      <section class="payment box">
+        <div class="payment box">
           <h2 class="box-name">PAYMENT</h2>
           <div class="input-group">
             <label for="card-id" class="input-label">Card number</label>
@@ -66,9 +68,28 @@
           </div>
           <div class="input-group">
             <label for="ccv-id" class="input-label">CCV number</label>
-            <input type="text" id="ccv-id" class="input-input" />
+            <input type="text" id="ccv-id" class="input-input short" />
           </div>
-        
+        </div>
+      </section>
+      <section class="total">
+        <table class="totals-table">
+          <tbody>
+            <tr>
+              <td>Subtotal:</td>
+              <td>$19.27</td>
+            </tr>
+            <tr>
+              <td>Tax:</td>
+              <td>$0.96</td>
+            </tr>
+            <tr class="final-totals">
+              <td>Total:</td>
+              <td>$20.23</td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="checkout" type="button">Place Order</button>
       </section>
     </div>
   </body>

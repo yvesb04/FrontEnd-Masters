@@ -6,7 +6,7 @@ body {
   padding: 0;
   margin: 0;
   background-color: #efefef;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .coffee-logo {
@@ -14,13 +14,11 @@ body {
   top: 3px;
   position: relative;
   right: 3px;
-  
 }
 
 .header-coffee {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   text-align: center;
-  
 }
 
 .header-coffee-bar {
@@ -34,17 +32,22 @@ body {
 
 .page {
   display: grid;
-  gap: 20px;
-  grid-template-areas: 
-  "order name"
-  "order payment";
-  margin: 30px;
+  gap: 30px;
+  grid-template-areas:
+    "order payment-column"
+    "total total";
+  padding: 30px;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .box {
   background-color: #eee1d5;
-  padding: 10px;
-
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0px 1px 3px rgb(0 0 0 / 0.2);
 }
 
 .order {
@@ -53,6 +56,8 @@ body {
 
 .name {
   grid-area: name;
+  display: flex;
+  flex-direction: column;
 }
 
 .payment {
@@ -60,29 +65,69 @@ body {
 }
 
 .box-name {
-  color: #88653c;
+  color: #885a2d;
   font-weight: normal;
   font-size: 16px;
 }
 
+.items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-areas:
+    "quantity name price"
+    ". options .";
+  border-bottom: 2px solid #DDB892;
+  padding: 10px 0;
+  row-gap: 10px;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item-quantity {
+  grid-area: quantity;
+}
+
 .item-name {
   font-weight: bold;
+  justify-items: center;
+  grid-area: name;
 }
 
 .item-price {
   font-weight: bold;
+  grid-area: price;
+}
+
+.item-options-list {
+  list-style: none;
+  grid-area: options;
+  color: #B08968;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+.item-option {
+  margin-bottom: 5px;
 }
 
 .input-group {
   position: relative;
   display: inline-block;
-  
 }
 
 .input-label {
-  color: #88653c;
+  color: #885a2d;
   font-size: 11px;
-  position:absolute;
+  position: absolute;
   left: 25px;
   top: -7px;
   padding: 0px 2px;
@@ -92,7 +137,45 @@ body {
 .input-input {
   padding: 8px;
   border-radius: 20px;
-  background-color: #eee1d5;
-  border: 2px solid #88653c;
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid #885a2d;
+  width: 100%;
+  font-size: 18px;
+  text-indent: 18px;
 }
 
+.short {
+  width: 50%;
+}
+
+.total {
+  grid-area: total;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.totals-table {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 30px;
+}
+
+.totals-table td {
+  padding: 10px;
+}
+
+.totals-table td:last-child {
+  font-weight: bold;
+}
+
+
+.checkout {
+  background-color: #deb993;
+  border-radius: 100px;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  padding: 10px 30px;
+}
