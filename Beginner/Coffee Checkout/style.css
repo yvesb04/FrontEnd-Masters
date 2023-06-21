@@ -32,7 +32,8 @@ body {
 
 .page {
   display: grid;
-  gap: 30px;
+  row-gap: 30px;
+  column-gap: 30px;
   grid-template-areas:
     "order payment-column"
     "total total";
@@ -45,19 +46,14 @@ body {
 .box {
   background-color: #eee1d5;
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-bottom: 20px;
   box-shadow: 0px 1px 3px rgb(0 0 0 / 0.2);
+  width: 100%;
 }
 
 .order {
   grid-area: order;
-}
-
-.name {
-  grid-area: name;
-  display: flex;
-  flex-direction: column;
 }
 
 .payment {
@@ -121,7 +117,7 @@ body {
 
 .input-group {
   position: relative;
-  display: inline-block;
+  margin-bottom: 20px;
 }
 
 .input-label {
