@@ -163,6 +163,10 @@ body {
 }
 
 .totals-table td:last-child {
+  text-align: right;
+}
+
+.final-totals {
   font-weight: bold;
 }
 
