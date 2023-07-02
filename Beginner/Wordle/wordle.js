@@ -1,6 +1,7 @@
 const ANSWER_LENGTH = 5;
 const NUM_ANSWERS = 6;
 const letters = document.querySelectorAll(".game-word");
+const keys = document.querySelectorAll(".keyboard");
 
 async function init() {
   let rowNumber = 0;
@@ -29,6 +30,17 @@ async function init() {
       handleLetter(letter);
     }
     console.log(currentWord);
+  });
+
+  document.addEventListener("click", function (event) {
+    pressed = event.target.innerHTML;
+    if (pressed == "ENTER") {
+      handleEnter();
+    } else if (pressed == "DEL") {
+      handleBackSpace();
+    } else {
+      handleLetter(pressed.toLowerCase());
+    }
   });
 
   async function handleEnter() {
@@ -75,7 +87,7 @@ async function init() {
                 letter.classList.add("letter-correct");
               };
             })(letters[rowNumber * ANSWER_LENGTH + i]),
-            82 * i
+            250 * i
           );
           letterMap.set(currentWord[i], letterMap.get(currentWord[i]) - 1);
         }
@@ -100,7 +112,7 @@ async function init() {
                   letter.classList.add("letter-present");
                 };
               })(letters[rowNumber * ANSWER_LENGTH + i]),
-              82 * i
+              250 * i
             );
             letterMap.set(currentWord[i], letterMap.get(currentWord[i]) - 1);
           } else {
@@ -110,7 +122,7 @@ async function init() {
                   letter.classList.add("letter-wrong");
                 };
               })(letters[rowNumber * ANSWER_LENGTH + i]),
-              82 * i
+              250 * i
             );
           }
         }
