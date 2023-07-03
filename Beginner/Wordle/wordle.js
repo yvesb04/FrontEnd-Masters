@@ -1,7 +1,7 @@
 const ANSWER_LENGTH = 5;
 const NUM_ANSWERS = 6;
 const letters = document.querySelectorAll(".game-word");
-const keys = document.querySelectorAll(".keyboard");
+const keys = document.querySelector(".keyboard");
 
 async function init() {
   let rowNumber = 0;
@@ -32,8 +32,13 @@ async function init() {
     console.log(currentWord);
   });
 
-  document.addEventListener("click", function (event) {
-    pressed = event.target.innerHTML;
+  keys.addEventListener("click", function (event) {
+    if (!event.target.classList.contains('key')) {
+      return;
+    }
+
+    let pressed = event.target.textContent;
+
     if (pressed == "ENTER") {
       handleEnter();
     } else if (pressed == "DEL") {
